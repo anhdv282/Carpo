@@ -1,0 +1,43 @@
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Tạo sản phẩm</h3>
+                </div>
+                <form role="form" action="/admin/products/create" method="POST" enctype="multipart/form-data">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="name">Tên sản phẩm</label>
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Tên sản phẩm">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Giá sản phẩm</label>
+                        <input type="text" class="form-control" name="price" id="price" placeholder="Giá sản phẩm">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Mô tả</label>
+                        <textarea id="description" name="description" rows="10" cols="80">
+                            
+                        </textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="image">Ảnh sản phẩm</label>
+                      <input type="file" id="image" name="image">
+                    </div>
+                  </div>
+                  <!-- /.box-body -->
+                  <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        CKEDITOR.replace('description')
+  })
+</script>

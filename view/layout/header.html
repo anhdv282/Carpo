@@ -1,0 +1,116 @@
+{{define "header"}}
+<header>
+    <div class="container-fluid">
+
+        <!-- Liên hệ ADMIN -->
+        <!-- <div class="contact-admin">
+                                <span>Email: admin@carpo.com - Phone: 012345678</span>
+                            </div> -->
+
+        <!-- Thanh điều hướng - tìm kiếm -->
+        <div class="header-main d-flex flex-row justify-content-between align-items-center">
+            <div class="img-logo">
+                <a href="./index.html">
+                    <img src="./images/logo.png" alt="logo" class="img-responsive logo">
+                </a>
+
+            </div>
+            <!-- <div class="navigation-hiden">
+                                    <nav>
+                                        
+                                            <ul class="mr-auto ml-auto">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Trang chủ</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Sản phẩm</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Khuyến mại</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Blog</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Liên hệ</a>
+                                                </li>
+                                            </ul>
+                
+                                    </nav>
+                                </div> -->
+            <div class="search-box border-main">
+                <input type="text" name="timkiem" placeholder="Nhập từ khóa" class="border-none">
+                <button type="submit" class="btn-search bg-main text-white">Tìm kiếm</button>
+            </div>
+            <div class="g-btn-login d-flex flex-row justify-content-between align-items-center color-text-main">
+                <div class="btn-login btn-search">
+                    <span class="btn-login-icon">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <a href="./login.html">
+                    <div class="btn-login">
+                        <span class="btn-login-icon">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                        <span class="btn-login-text font-14 text-uppercase">ĐĂNG NHẬP</span>
+                    </div>
+                </a>
+                <a href="./shopping-card.html">
+                    <div class="btn-login">
+                        <span class="btn-login-icon">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </span>
+                        <span class="btn-login-text font-14 text-uppercase">GIỎ HÀNG</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid container-fluid-nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Trang chủ
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/shop">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/shop2">Khuyến mại</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Liên hệ</a>
+                        </li>
+                        <!-- Dropdown -->
+
+
+                    </ul>
+                    <!-- Links -->
+                    <!-- Collapsible content -->
+
+            </nav>
+        </div>
+    </div>
+</header>
+{{end}}

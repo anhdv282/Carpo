@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>KARMA | Admin</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="/admin/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/admin/adminlte/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="/admin/adminlte/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/admin/adminlte/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="/admin/adminlte/dist/css/skins/_all-skins.min.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="/admin/adminlte/bower_components/morris.js/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="/admin/adminlte/bower_components/jvectormap/jquery-jvectormap.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet"
+    href="/admin/adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="/admin/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- Bootstrap time Picker -->
+  <link rel="stylesheet" href="/admin/adminlte/plugins/timepicker/bootstrap-timepicker.min.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="/admin/adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="/admin/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+  <!-- jQuery 3 -->
+  <script src="/admin/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="/admin/adminlte/bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Select2 -->
+  <link rel="stylesheet" href="/admin/adminlte/bower_components/select2/dist/css/select2.min.css">
+  <!-- CK Editor -->
+  <script src="/admin/adminlte/bower_components/ckeditor/ckeditor.js"></script>
+  <!-- DataTables -->
+  <script src="/admin/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="/admin/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="/admin/adminlte/bower_components/fastclick/lib/fastclick.js"></script>
+  <!-- AdminLTE App -->
+  <script src="/admin/adminlte/dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="/admin/adminlte/dist/js/demo.js"></script>
+  <!-- Google Font -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <!-- Toastr -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css" />
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <span class="logo-mini">
+          <b>A</span>
+        <span class="logo-lg">
+          <b>ADMIN</span>
+      </a>
+      <!-- Header Navbar -->
+      <nav class="navbar navbar-static-top">
+        <a href="/admin/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+              <a href="/admin/#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/resources/images/user.jpeg" class="user-image navbar-user-avatar" alt="User Image">
+                <span class="hidden-xs">Nguyễn Văn A</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header">
+                  <img src="{{.user_info.UserAvatar}}" class="img-circle navbar-user-avatar" alt="User Image">
+                  <p>
+                    Nguyễn Văn A
+                    <small>nguyenvana@gmail.com</small>
+                  </p>
+                </li>
+                <li class="user-body">
+                  <div class="col-xs-12 text-center">
+                    <span style="cursor:pointer" data-toggle="modal" data-target="#modal-change-password"></a><i
+                        class="fa fa-lock"></i> Đổi mật khẩu
+                    </span>
+                  </div>
+                </li>
+                <li class="user-footer">
+                  <div class="pull-right">
+                    <button class="btn btn-danger btn-flat"><span class="btn-signout">Đăng xuất</span></button>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column -->
+    <aside class="main-sidebar">
+      <!-- sidebar -->
+      <section class="sidebar">
+        <ul class="sidebar-menu" data-widget="tree">
+          <li class="header">MENU QUẢN LÝ</li>
+          <li class="treeview">
+            <a href="/admin/#">
+              <i class="fa fa-user"></i>
+              <span>Người dùng</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="/admin/user/create"><i class="fa fa-circle-o"></i> Tạo tài khoản</a></li>
+              <li><a href="/admin/user"><i class="fa fa-circle-o"></i> Danh sách người dùng</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="/admin/#">
+              <i class="fa fa-user"></i>
+              <span>Sản phẩm</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="/admin/products"><i class="fa fa-circle-o"></i> Danh sách sản phẩm</a></li>
+              <li><a href="/admin/products/create"><i class="fa fa-circle-o"></i> Tạo sản phẩm</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper" style="font-weight: 500; padding-top: 1rem">
+      <!-- Nội dung render-->
+      {{ yield }}
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      Copyright &copy;2019 
+    </footer>
+  </div>
+
+  <script>
+    $.widget.bridge('uibutton', $.ui.button);
+  </script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="/admin/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Select2 -->
+  <script src="/admin/adminlte/bower_components/select2/dist/js/select2.full.min.js"></script>
+  <!-- CKEditor -->
+  <script src="/admin/adminlte/bower_components/ckeditor/ckeditor.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="/admin/adminlte/dist/js/demo.js"></script>
+
+  <script>
+  </script>
+</body>
+
+</html>
